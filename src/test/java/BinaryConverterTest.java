@@ -4,7 +4,7 @@ import org.junit.Test;
 public class BinaryConverterTest {
 
     @Test
-    public void toDecimalTest(){
+    public void toDecimalTest() {
         BinaryConverter binaryConverter = new BinaryConverter();
         int decimal = binaryConverter.toDecimal("1111");
         int decimal_1 = binaryConverter.toDecimal("110011111");
@@ -15,7 +15,7 @@ public class BinaryConverterTest {
     }
 
     @Test
-    public void toBinaryTest(){
+    public void toBinaryTest() {
         BinaryConverter binaryConverter = new BinaryConverter();
         String binary = Integer.toBinaryString(15);
         String binary_1 = Integer.toBinaryString(1047);
@@ -24,4 +24,18 @@ public class BinaryConverterTest {
         Assert.assertEquals(binary_1, "10000010111");
         Assert.assertEquals(binary_2, "100010110010100100");
     }
+
+    @Test
+    public void multiplyTest() {
+        BinaryConverter binaryConverter = new BinaryConverter();
+        String binary1 = binaryConverter.multiply("010","101");
+        String binary2 = binaryConverter.multiply("10101010","11001100");
+        String binary3 = binaryConverter.multiply("010110","101011");
+        String binary4 = binaryConverter.multiply("11010","11011");
+        Assert.assertEquals(binary1, "1010");
+        Assert.assertEquals(binary2, "1000011101111000");
+        Assert.assertEquals(binary3, "1110110010");
+        Assert.assertEquals(binary4, "1010111110");
+    }
+
 }
