@@ -4,12 +4,14 @@ public class BinaryConverter {
     // comment for commit test, since it doesn't want to work
 
     public int toDecimal(String binary){
+        //Takes binary string input, converts to decimal.
         String binaryString = binary;
         int decimal = Integer.parseInt(binaryString, 2);
         return decimal;
     }
 
     public String toBinary(int decimal){
+        //Takes int decimal as input, converts to binary string.
         String binary = Integer.toBinaryString(decimal);
         return binary;
     }
