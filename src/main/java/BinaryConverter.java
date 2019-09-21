@@ -1,6 +1,7 @@
 public class BinaryConverter {
     String[] storage;
     //stores first number entered and function pressed
+    // comment for commit test, since it doesn't want to work
 
     public int toDecimal(String binary){
         String binaryString = binary;
