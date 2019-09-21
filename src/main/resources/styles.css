@@ -1,0 +1,11 @@
+#calcDisplay{
+    -fx-min-width: 400;
+    -fx-min-height: 75;
+    -fx-font-size:40;
+}
+
+#button{
+    -fx-pref-width: 90;
+    -fx-pref-height: 90;
+    -fx-font-size: 40;
+}
