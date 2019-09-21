@@ -1,4 +1,6 @@
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -29,6 +31,7 @@ public class UI extends Application {
     }
 
     public void start(Stage primaryStage)throws Exception{
+        BinaryConverter a = new BinaryConverter();
 
         //Calculator display & buttons
         calcDisplay = new TextField();
@@ -50,37 +53,65 @@ public class UI extends Application {
         buttonSquare = new Button("▢");
         buttonSquare.setId("button");
         buttonSquare.setTranslateX(325);
-        buttonSquare.setTranslateY(-50);
+        buttonSquare.setTranslateY(-50);buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"square");
+            calcDisplay.clear();
+        });
 
         buttonSquareRoot = new Button("√");
         buttonSquareRoot.setId("button");
         buttonSquareRoot.setTranslateX(425);
         buttonSquareRoot.setTranslateY(-50);
+        buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"root");
+            calcDisplay.clear();
+        });
 
         buttonAddition = new Button("+");
         buttonAddition.setId("button");
         buttonAddition.setTranslateX(325);
         buttonAddition.setTranslateY(50);
+        buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"add");
+            calcDisplay.clear();
+        });
 
         buttonSubtraction = new Button("-");
         buttonSubtraction.setId("button");
         buttonSubtraction.setTranslateX(425);
-        buttonSubtraction.setTranslateY(50);
+        buttonSubtraction.setTranslateY(50);buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"subtract");
+            calcDisplay.clear();
+        });
 
         buttonMultiplication = new Button("X");
         buttonMultiplication.setId("button");
         buttonMultiplication.setTranslateX(325);
         buttonMultiplication.setTranslateY(150);
+        buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"multiply");
+            calcDisplay.clear();
+        });
 
         buttonDivision = new Button("÷");
         buttonDivision.setId("button");
         buttonDivision.setTranslateX(425);
-        buttonDivision.setTranslateY(150);
+        buttonDivision.setTranslateY(150);buttonMultiplication.setOnAction(actionEvent -> {
+            a.store(calcDisplay.getText(),"divide");
+            calcDisplay.clear();
+        });
 
         buttonEquals = new Button("=");
         buttonEquals.setId("button");
         buttonEquals.setTranslateX(425);
         buttonEquals.setTranslateY(250);
+        buttonEquals.setOnAction(actionEvent -> {
+            try {
+                a.execute(calcDisplay.getText());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
         //End of Display
 
         gridPane = new GridPane();
