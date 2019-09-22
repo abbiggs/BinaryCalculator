@@ -74,4 +74,10 @@ public class BinaryConverter {
         int result = dec1 - dec2;
         return toBinary(result);
     }
+
+    public String square(String binary1) {
+        int dec1 = toDecimal(binary1);
+        int result = dec1 * dec1;
+        return toBinary(result);
+    }
 }

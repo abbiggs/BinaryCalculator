@@ -75,6 +75,20 @@ public class BinaryConverterTest {
         Assert.assertEquals(binary3, "11111111111111111111111111101011");
         Assert.assertEquals(binary4, "11111111111111111111111111111111");
     }
+    @Test
+    public void squareTest () {
+        BinaryConverter binaryConverter = new BinaryConverter();
+        String binary1 = binaryConverter.square("010");
+        String binary2 = binaryConverter.square("1010");
+        String binary3 = binaryConverter.square("1110011");
+        String binary4 = binaryConverter.square("1");
+        String binary5 = binaryConverter.square("0");
+        Assert.assertEquals(binary1, "100");
+        Assert.assertEquals(binary2, "1100100");
+        Assert.assertEquals(binary3, "11001110101001");
+        Assert.assertEquals(binary4, "1");
+        Assert.assertEquals(binary5, "0");
+    }
 
 
 
