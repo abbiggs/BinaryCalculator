@@ -78,12 +78,12 @@ public class BinaryConverterTest {
     @Test
     public void squareTest () {
         BinaryConverter binaryConverter = new BinaryConverter();
-        String binary1 = binaryConverter.square("010");
+        String binary1 = binaryConverter.square("11");
         String binary2 = binaryConverter.square("1010");
         String binary3 = binaryConverter.square("1110011");
         String binary4 = binaryConverter.square("1");
         String binary5 = binaryConverter.square("0");
-        Assert.assertEquals(binary1, "100");
+        Assert.assertEquals(binary1, "1001");
         Assert.assertEquals(binary2, "1100100");
         Assert.assertEquals(binary3, "11001110101001");
         Assert.assertEquals(binary4, "1");

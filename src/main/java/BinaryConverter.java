@@ -28,6 +28,10 @@ public class BinaryConverter {
         storage = new String[]{binary,function};
     }
 
+    public void clearStorage(){
+        storage = new String[2];
+    }
+
     public String execute(String binary) throws Exception {
         // runs on clicking equals button
         if (storage[1].equals("multiply")) {
@@ -39,10 +43,18 @@ public class BinaryConverter {
         else if (storage[1].equals("subtract")) {
             return subtract(storage[0], binary);
         }
+        else if (storage[1].equals("divide")){
+            return divide((storage[0]), binary);
+        }
+        else if (storage[1].equals("square")){
+            return square(storage[0]);
+        }
+        else if (storage[1].equals("root")){
+            return squareRoot(storage[0]);
+        }
         else {
             throw new Exception();
         }
-
     }
 
     public String multiply(String binary1, String binary2) {

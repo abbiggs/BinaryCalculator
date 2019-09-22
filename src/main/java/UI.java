@@ -126,6 +126,7 @@ public class UI extends Application {
         buttonClear.setTranslateY(250);
         buttonClear.setOnAction((event) ->{
            calcDisplay.setText("");
+           a.clearStorage();;
         });
         //End of Display
 
