@@ -50,6 +50,17 @@ public class BinaryConverter {
         return toBinary(result);
     }
 
+    public String divide(String binary1, String binary2) {
+        try {
+            int dec1 = toDecimal(binary1);
+            int dec2 = toDecimal(binary2);
+            int result = dec1 / dec2;
+            return toBinary(result);
+        } catch (ArithmeticException e) {
+            return "Divide by Zero Err.";
+        }
+    }
+
     public String add(String binary1, String binary2) {
         int dec1 = toDecimal(binary1);
         int dec2 = toDecimal(binary2);

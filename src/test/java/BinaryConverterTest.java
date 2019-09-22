@@ -37,7 +37,20 @@ public class BinaryConverterTest {
         Assert.assertEquals(binary3, "1110110010");
         Assert.assertEquals(binary4, "1010111110");
     }
-
+    @Test
+    public void divideTest() {
+        BinaryConverter binaryConverter = new BinaryConverter();
+        String binary1 = binaryConverter.divide("100000", "10");
+        String binary2 = binaryConverter.divide("11001100", "1000");
+        String binary3 = binaryConverter.divide("10110110", "1110");
+        String binary4 = binaryConverter.divide("1010", "11");
+        String binary5 = binaryConverter.divide("010", "0");
+        Assert.assertEquals(binary1, "10000");
+        Assert.assertEquals(binary2, "11001");
+        Assert.assertEquals(binary3, "1101");
+        Assert.assertEquals(binary4, "11");
+        Assert.assertEquals(binary5, "Divide by Zero Err.");
+    }
     @Test
     public void addTest() {
         BinaryConverter binaryConverter = new BinaryConverter();
