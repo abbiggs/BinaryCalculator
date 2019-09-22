@@ -89,6 +89,21 @@ public class BinaryConverterTest {
         Assert.assertEquals(binary4, "1");
         Assert.assertEquals(binary5, "0");
     }
+    @Test public void squareRootTest () {
+        BinaryConverter binaryConverter = new BinaryConverter();
+        String binary1 = binaryConverter.squareRoot("100");
+        String binary2 = binaryConverter.squareRoot("10000");
+        String binary3 = binaryConverter.squareRoot("1111101");
+        String binary4 = binaryConverter.squareRoot("1");
+        String binary5 = binaryConverter.squareRoot("0");
+        String binary6 = binaryConverter.squareRoot("1001");
+        Assert.assertEquals(binary1, "10");
+        Assert.assertEquals(binary2, "100");
+        Assert.assertEquals(binary3, "1011");
+        Assert.assertEquals(binary4, "1");
+        Assert.assertEquals(binary5, "0");
+        Assert.assertEquals(binary6, "11");
+    }
 
 
 

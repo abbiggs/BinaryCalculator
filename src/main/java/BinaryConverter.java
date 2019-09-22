@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class BinaryConverter {
     String[] storage;
     //stores first number entered and function pressed
@@ -78,6 +80,12 @@ public class BinaryConverter {
     public String square(String binary1) {
         int dec1 = toDecimal(binary1);
         int result = dec1 * dec1;
+        return toBinary(result);
+    }
+
+    public String squareRoot (String binary1) {
+        int dec1 = toDecimal(binary1);
+        int result = (int) Math.sqrt(dec1);
         return toBinary(result);
     }
 }
