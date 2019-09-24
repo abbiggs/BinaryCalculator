@@ -47,7 +47,7 @@ public class BinaryConverter {
             return divide((storage[0]), binary);
         }
         else if (storage[1].equals("square")){
-            return square(storage[0]);
+            return square(storage[0] );
         }
         else if (storage[1].equals("root")){
             return squareRoot(storage[0]);
@@ -86,7 +86,11 @@ public class BinaryConverter {
         int dec1 = toDecimal(binary1);
         int dec2 = toDecimal(binary2);
         int result = dec1 - dec2;
-        return toBinary(result);
+        if(result > 0) {
+            return toBinary(result);
+        }else{
+            return "Negative Num Err.";
+        }
     }
 
     public String square(String binary1) {
