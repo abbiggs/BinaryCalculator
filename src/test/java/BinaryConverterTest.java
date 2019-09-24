@@ -66,14 +66,14 @@ public class BinaryConverterTest {
     @Test
     public void subtractTest() {
         BinaryConverter binaryConverter = new BinaryConverter();
-        String binary1 = binaryConverter.subtract("010","101");
-        String binary2 = binaryConverter.subtract("10101010","11001100");
-        String binary3 = binaryConverter.subtract("010110","101011");
-        String binary4 = binaryConverter.subtract("11010","11011");
-        Assert.assertEquals(binary1, "11111111111111111111111111111101");
-        Assert.assertEquals(binary2, "11111111111111111111111111011110");
-        Assert.assertEquals(binary3, "11111111111111111111111111101011");
-        Assert.assertEquals(binary4, "11111111111111111111111111111111");
+        String binary1 = binaryConverter.subtract("101","010");
+        String binary2 = binaryConverter.subtract("11001100","10101010");
+        String binary3 = binaryConverter.subtract("101011","010110");
+        String binary4 = binaryConverter.subtract("11011","11010");
+        Assert.assertEquals(binary1, "11");
+        Assert.assertEquals(binary2, "100010");
+        Assert.assertEquals(binary3, "10101");
+        Assert.assertEquals(binary4, "1");
     }
     @Test
     public void squareTest () {
